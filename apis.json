@@ -1,0 +1,58 @@
+{
+    "name": "SIGFOX",
+    "description": "Imagine a world where Things can communicate with us. The internet of things will transform our lives in the next 25 years. Driven by simplicity we unlock the power of the IoT and give life to the physical world",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28254-www-sigfox-com.jpg",
+    "tags": [
+        "have api",
+        "isp",
+        "networks",
+        "telecommunications"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/sigfox\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "SIGFOX",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/28254-www-sigfox-com.jpg",
+            "humanURL": "https:\/\/www.sigfox.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/sigfox-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/sigfox-2"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/resources.sigfox.com\/"
+        },
+        {
+            "type": "Developers",
+            "url": "https:\/\/www.sigfox.com\/en\/sigfox-developers"
+        },
+        {
+            "type": "Documentation",
+            "url": "https:\/\/resources.sigfox.com\/document\/callbacks-documentation"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/sigfox"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.sigfox.com"
+        }
+    ]
+}
