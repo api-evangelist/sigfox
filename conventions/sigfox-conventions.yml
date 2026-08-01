@@ -1,0 +1,45 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.sigfox.com/apidocs
+docs:
+- https://support.sigfox.com/docs/api-versioning
+- https://support.sigfox.com/docs/api-rate-limiting
+- https://support.sigfox.com/docs/api-response-code
+- https://support.sigfox.com/docs/timestamps-format
+authentication:
+  style: http-basic
+  detail: >-
+    HTTP Basic with API-access login/password; permissions scoped by granted
+    profiles. See authentication/sigfox-authentication.yml.
+versioning:
+  style: uri-path
+  current: v2
+  detail: >-
+    Version suffix (vX) required in every request path; backward-compatible
+    changes within a major, breaking changes only in a new major. See
+    lifecycle/sigfox-lifecycle.yml.
+rate_limiting:
+  signaled_via: HTTP 429 status
+  detail: >-
+    Per-endpoint limits; 429 "too many requests" on breach. See
+    rate-limits/sigfox-rate-limits.yml.
+timestamps:
+  format: milliseconds since Unix epoch
+  detail: >-
+    Sigfox API timestamps are expressed in Unix epoch time (milliseconds);
+    the timezone for formatted responses is chosen when the API access is
+    created.
+error_envelope:
+  detail: >-
+    Error responses return an HTTP status code with a JSON body carrying a
+    message field (e.g. {"message": "Bad Credentials"} on 401). See
+    errors/sigfox-problem-types.yml.
+idempotency:
+  supported: false
+  detail: >-
+    No idempotency-key mechanism is documented for the Sigfox API.
+pagination:
+  style: cursor
+  detail: >-
+    List endpoints support paging via limit/offset query parameters and return
+    a paging object with a next link where applicable (per the API reference).

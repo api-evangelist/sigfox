@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.sigfox.com/docs/api-credential-creation
+docs: https://support.sigfox.com/docs/api-credential-creation
+summary:
+  types: [http]
+  scheme: basic
+  api_key_in: []
+  oauth2_flows: []
+  notes: >-
+    The Sigfox Cloud API authenticates with HTTP Basic credentials. An
+    "API access" is created in the Sigfox backend under a Group (Group tab >
+    API access > New). Each API access has a login (id) and password, plus a
+    display name, a timezone for responses, and one or more granted profiles
+    that define its role-based permissions. The credentials are sent as the
+    HTTP Basic Authorization header on every request. Rights are granted per
+    API access, so what endpoints an API user can call is determined by the
+    assigned profiles.
+schemes:
+- name: basicAuth
+  type: http
+  scheme: basic
+  description: >-
+    HTTP Basic authentication using the API access login (username) and
+    password created in the Sigfox backend API access page. Authorization is
+    governed by the profiles granted to the API access.
+  sources: [https://support.sigfox.com/docs/api-credential-creation]

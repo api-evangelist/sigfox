@@ -1,0 +1,60 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.sigfox.com/docs/api-rate-limiting
+docs: https://support.sigfox.com/docs/api-rate-limiting
+over_limit_status: 429
+over_limit_message: HTTP 429 too many requests
+notes: >-
+  Rate limits are applied per endpoint. Exceeding a limit returns HTTP 429
+  "too many requests", which customer systems must handle. Sigfox reserves the
+  right to modify these limits without notice. Values below reflect the
+  published rate-limiting reference (several updated 29 Jul 2025).
+rate_limits:
+- endpoint: /v2/devices/{id}/messages
+  method: GET
+  limit_count: 15
+  window: per second (parallel)
+- endpoint: /v2/devices
+  method: GET
+  limit_count: 50
+  window: per 10 seconds
+- endpoint: /v2/devices/{id}
+  method: PUT/DELETE
+  limit_count: 1
+  window: per 60 minutes
+- endpoint: /v2/devices/bulk
+  method: POST
+  limit_count: 5
+  window: per 10 minutes
+- endpoint: /v2/devices/bulk/transfer
+  method: POST
+  limit_count: 5
+  window: per 10 minutes
+- endpoint: /v2/base-stations/bulk
+  method: POST
+  limit_count: 5
+  window: per 10 minutes
+- endpoint: /v2/base-stations/{id}
+  method: GET
+  limit_count: 1
+  window: per 600 seconds
+- endpoint: /v2/base-stations/{id}/messages
+  method: GET
+  limit_count: 50
+  window: per second (parallel)
+- endpoint: /v2/coverages/global/predictions/bulk
+  method: POST
+  limit_count: 5
+  window: per 5 minutes
+- endpoint: /v2/coverages/global/predictions/bulk/{jobId}
+  method: GET
+  limit_count: 10
+  window: per minute
+- endpoint: /v2/device-types/{id}/messages
+  method: GET
+  limit_count: 10
+  window: per 10 seconds
+- endpoint: /v2/device-types/{id}/callbacks-not-delivered
+  method: GET
+  limit_count: 10
+  window: per 10 seconds

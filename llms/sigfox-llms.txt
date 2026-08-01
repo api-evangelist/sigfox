@@ -1,0 +1,35 @@
+# Sigfox
+
+> Sigfox is the 0G low-power wide-area network (LPWAN) for massive IoT, now operated as a technology by UnaBiz. The Sigfox Cloud exposes a RESTful backend API for managing devices, device types, contracts, groups, users and base stations, retrieving device messages, predicting coverage, and configuring callbacks that push uplink data to customer systems.
+
+## APIs
+
+- [Sigfox Cloud API (reference)](https://support.sigfox.com/apidocs): RESTful backend API; base https://api.sigfox.com/v2. HTTP Basic auth with role-scoped API-access credentials; URI-path versioning (/v2).
+- [OpenAPI spec (JSON)](https://api.sigfox.com/v2/doc.json): Published OpenAPI definition (credential-gated).
+- [OpenAPI spec (YAML)](https://api.sigfox.com/v2/doc.yaml): Published OpenAPI definition (credential-gated).
+
+## Docs
+
+- [API documentation](https://support.sigfox.com/docs/api-documentation): Overview of the Sigfox backend API.
+- [Create API credentials](https://support.sigfox.com/docs/api-credential-creation): How to create an API access and grant profiles.
+- [API versioning](https://support.sigfox.com/docs/api-versioning): Version suffix (/vX) and compatibility policy.
+- [API rate limiting](https://support.sigfox.com/docs/api-rate-limiting): Per-endpoint limits and HTTP 429 behavior.
+- [API response codes](https://support.sigfox.com/docs/api-response-code): HTTP status codes returned by the API.
+- [Developer / Build portal](https://build.sigfox.com/): Docs, tools, protocol libraries, device certification, and test credentials.
+
+## Repo artifacts
+
+- [Authentication profile](authentication/sigfox-authentication.yml)
+- [Rate limits](rate-limits/sigfox-rate-limits.yml)
+- [API conventions](conventions/sigfox-conventions.yml)
+- [Error / response codes](errors/sigfox-problem-types.yml)
+- [Lifecycle & versioning](lifecycle/sigfox-lifecycle.yml)
+- [Conformance](conformance/sigfox-conformance.yml)
+
+## Operations & support
+
+- [Status page](https://status.sigfox.com/)
+- [Support / community](https://support.sigfox.com/)
+- [GitHub organization](https://github.com/sigfox)
+- [Terms](https://sigfox.com/terms/)
+- [Privacy policy](https://sigfox.com/privacy-policy/)

@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.sigfox.com/docs/api-versioning
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://support.sigfox.com/docs/api-versioning
+  notes: >-
+    Versions are exposed as a "vX" suffix in the endpoint path (e.g.
+    api.sigfox.com/v2/devices). Every request must include the version suffix.
+    Backwards-compatible changes (new interfaces/bindings, optional request
+    fields, added response fields, added enum values) ship within the current
+    major version; backwards-incompatible changes (removing/renaming
+    interfaces/fields/enum values, changing HTTP bindings or field types,
+    altering visible behavior, adding mandatory request fields) are reserved
+    for the next major version.
+deprecation:
+  policy_url: https://support.sigfox.com/docs/api-versioning
+  sunset_header: false
+  notes: >-
+    Breaking changes are only introduced in a new major version; minor/patch
+    changes remain backward compatible. News and changes are published on the
+    Sigfox Portal, and users can subscribe to release emails via their user
+    profile.
+status_page: https://status.sigfox.com/
+sla:
+  url: null
+  uptime_target: null
+deprecated_operations: []

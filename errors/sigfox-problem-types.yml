@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://support.sigfox.com/docs/api-response-code
+docs: https://support.sigfox.com/docs/api-response-code
+format: custom-json
+envelope:
+  field: message
+  example: '{"message": "Bad Credentials"}'
+  notes: >-
+    Errors are returned with a standard HTTP status code and a JSON body
+    carrying a human-readable "message" field (not RFC 9457 problem+json).
+problems:
+- status: 401
+  title: Bad Credentials
+  meaning: Missing or invalid HTTP Basic credentials.
+  evidence: 'Live response from https://api.sigfox.com/v2/doc.json: {"message": "Bad Credentials"}'
+  remediation: Provide a valid API-access login and password with the required profile.
+- status: 403
+  title: Forbidden
+  meaning: Authenticated caller lacks a profile permitting the requested resource.
+  evidence: Live 403 responses from api.sigfox.com resource paths.
+- status: 429
+  title: Too Many Requests
+  meaning: Endpoint rate limit exceeded.
+  evidence: https://support.sigfox.com/docs/api-rate-limiting
+  remediation: Back off and retry within the documented per-endpoint limits (see rate-limits/).

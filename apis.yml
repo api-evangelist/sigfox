@@ -1,8 +1,15 @@
 aid: sigfox
 name: Sigfox
-description: 'Sigfox is a company surfaced as a portfolio company of partech and added to the API Evangelist
-  network as a stub for enrichment. Sector: Industrial, Energy & IoT. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Sigfox is the 0G low-power wide-area network (LPWAN) for massive IoT, now
+  operated as a technology by UnaBiz. The Sigfox Cloud exposes a RESTful backend
+  API (base https://api.sigfox.com/v2) for managing devices, device types,
+  contracts, groups, users, base stations, coverage predictions, and for
+  retrieving device messages and configuring callbacks that push uplink data to
+  customer systems. The network reaches 70+ countries and millions of connected
+  devices. The API uses HTTP Basic authentication with API-access credentials
+  scoped by role-based profiles, URI-path versioning (/v2), documented rate
+  limits, and a published OpenAPI specification.
 url: https://raw.githubusercontent.com/api-evangelist/sigfox/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,18 +17,105 @@ x-backed-by:
 - partech
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://github.com/sigfox.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Industrial, Energy & Iot
-apis: []
+- IoT
+- LPWAN
+- Connectivity
+- Device Management
+- Networking
+- Telecommunications
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Sigfox Cloud API
+  description: >-
+    RESTful backend API for the Sigfox 0G network — manage devices, device
+    types, contracts, groups, users and base stations; retrieve device messages;
+    predict coverage; and configure callbacks that deliver uplink messages to
+    customer systems. HTTP Basic auth with role-scoped API-access credentials.
+  humanURL: https://support.sigfox.com/apidocs
+  baseURL: https://api.sigfox.com/v2
+  properties:
+  - type: APIReference
+    url: https://support.sigfox.com/apidocs
+  - type: Documentation
+    url: https://support.sigfox.com/docs
+  - type: OpenAPI
+    url: https://api.sigfox.com/v2/doc.yaml
+  - type: Authentication
+    url: authentication/sigfox-authentication.yml
+  - type: RateLimits
+    url: rate-limits/sigfox-rate-limits.yml
+  - type: ErrorCatalog
+    url: errors/sigfox-problem-types.yml
+  - type: Conventions
+    url: conventions/sigfox-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/sigfox-lifecycle.yml
 common:
+- type: DomainSecurity
+  url: security/sigfox-domain-security.yml
 - type: Website
-  url: http://sigfox.com/
+  url: https://sigfox.com/
+- type: DeveloperPortal
+  url: https://build.sigfox.com/
+- type: Documentation
+  url: https://support.sigfox.com/docs
+- type: APIReference
+  url: https://support.sigfox.com/apidocs
+- type: GettingStarted
+  url: https://support.sigfox.com/docs/api-first-connection
+- type: Support
+  url: https://support.sigfox.com/
+- type: GitHubOrganization
+  url: https://github.com/sigfox
+- type: StatusPage
+  url: https://status.sigfox.com/
+- type: Deprecation
+  url: https://support.sigfox.com/docs/api-versioning
+- type: SignUp
+  url: https://buy.sigfox.com/buy
+- type: TermsOfService
+  url: https://sigfox.com/terms/
+- type: PrivacyPolicy
+  url: https://sigfox.com/privacy-policy/
+- type: Authentication
+  url: authentication/sigfox-authentication.yml
+- type: RateLimits
+  url: rate-limits/sigfox-rate-limits.yml
+- type: ErrorCatalog
+  url: errors/sigfox-problem-types.yml
+- type: Conventions
+  url: conventions/sigfox-conventions.yml
+- type: Lifecycle
+  url: lifecycle/sigfox-lifecycle.yml
+- type: Conformance
+  url: conformance/sigfox-conformance.yml
+- type: LLMsTxt
+  url: llms/sigfox-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
